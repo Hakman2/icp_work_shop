@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Actor, HttpAgent } from '@dfinity/agent';
-import { idlFactory } from '../motoko-backend-only/declarations/backend/backend.did.js';
+import { idlFactory } from './motoko-backend-only/declarations/backend/backend.did.js';
 
 function App() {
   const [num1, setNum1] = useState('');
