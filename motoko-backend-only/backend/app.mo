@@ -1,23 +1,51 @@
 import Debug "mo:base/Debug";
-import Float "mo:base/Float";
-persistent actor Project{
-  // Decentralized Banking System
-  // CheckBalance, TopUp, WithDraw
-  // CheckBalance
-  stable var balance : Float = 100;
-  public func checkBalance(): async Text{
-    return "Your Balance is :" # Float.toText(balance);
+actor Project{
+  // var greeting : Text = "Hello UCC";
+  // Debug.print(greeting);
+  // let number : Nat = 8;
+  // Debug.print(debug_show(number));
+
+  // Creating a simple Record Type
+  // type StudentInfo = {
+  //   name : Text;
+  //   id : Nat;
+  //   isEaten : Bool;
+  // };
+
+  // var studentInfo : StudentInfo = {
+  //   name = "Osei Assibey";
+  //   id = 2983094;
+  //   isEaten = false;
+  // };
+
+  // Debug.print(debug_show(studentInfo));
+
+  // Functions
+  // public func addTwoNumbers(num1 : Nat, num2 : Nat): async Nat{
+  //   var total : Nat = num1 + num2;
+  //   return total;
+  // };
+
+  // Simple Calulator 
+  public func addFunc(num1 : Nat, num2 : Nat): async Nat{
+    var total : Nat = num1 + num2;
+    return total;
   };
 
-  // TopUp Function
-  public func topUp(amount : Float): async Text{
-    balance := balance + amount;
-    return "An amount :" # Float.toText(amount) # "added";
+  public func subFunc(num1 : Nat, num2 : Nat): async Nat{
+    var sub : Nat = num1 - num2;
+    return sub;
   };
 
-  // WithDraw
-  public func withDraw(amount : Float): async Text{
-    balance := balance - amount;
-    return "An amount :" # Float.toText(amount) # "added";
-  };
+  public func mulFunc(num1 : Nat, num2 : Nat): async Nat{
+    var mul : Nat = num1 * num2;
+    return mul;
+  };
+
+  public func divFunc(num1 : Nat, num2 : Nat): async Nat{
+    var div : Nat = num1 / num2;
+    return div;
+  };
+
+  
 };
